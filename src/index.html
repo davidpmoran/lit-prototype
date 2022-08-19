@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Angular Lit Web Components</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    p {
+      border: solid 1px blue;
+      padding: 8px;
+    }
+
+    .column {
+      float: left;
+    }
+
+    .left,
+    .right {
+      width: 25%;
+    }
+
+    .middle {
+      width: 50%;
+    }
+
+    .property-row {
+      display: flex;
+      width: 50px;
+    }
+
+    .property-column {
+      flex: 50%;
+      padding: 10px;
+      width: 200px;
+    }
+
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1.5fr 1.6fr 0.1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "column-left column-middle properties-column"
+        "column-left column-middle event-column"
+        "column-left column-middle .";
+    }
+
+    .column-left {
+      grid-area: column-left;
+    }
+
+    .column-middle {
+      grid-area: column-middle;
+    }
+
+    .properties-column {
+      grid-area: properties-column;
+    }
+
+    .event-column {
+      grid-area: event-column;
+    }
+  </style>
+</head>
+
+<body>
+  <corp-root></corp-root>
+</body>
+
+</html>

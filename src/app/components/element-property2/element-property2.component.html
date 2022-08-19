@@ -1,0 +1,52 @@
+<div class="property-row" style="display:none;" id="btn_properties_box">
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_BtnCTA" name="input_BtnCTA" value="{{ currentBtnElement?.innerText }}">
+    </div>
+    <br>
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_OnClick" name="input_OnClick" value="{{ currentBtnElement?.onclick }}">
+    </div>
+    <br>
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_CSS" name="input_CSS" value="{{ currentBtnElement?.style }}">
+    </div>
+
+    <br>
+
+
+</div>
+
+
+<button id="buttonElm2" part="button" style="display:none;">
+
+</button>
+
+
+<div id="labelComponent" class="property-row" id="label_properties_box" style="display:none;">
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_labelCTA" name="input_labelCTA" value="{{ currentLabelElement?.innerText }}">
+    </div>
+    <br>
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_labelOnClick" name="input_labelOnClick" value="{{ currentLabelElement?.onclick }}">
+    </div>
+    <br>
+
+    <div class="property-column" style="background-color:#bbb;">
+        <input type="text" id="input_labelCSS" name="input_labelCSS" value="{{ currentLabelElement?.style }}">
+    </div>
+
+</div>
+
+<button id="btn_Apply" part="button" (click)="applyChanges()">
+    Apply
+</button>
+
+<button id="btn_export" part="button" (click)="exportComponent()">
+    Export
+</button>
